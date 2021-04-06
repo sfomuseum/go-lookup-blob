@@ -8,10 +8,12 @@ github.com/golang/protobuf/ptypes
 github.com/golang/protobuf/ptypes/any
 github.com/golang/protobuf/ptypes/duration
 github.com/golang/protobuf/ptypes/timestamp
-# github.com/googleapis/gax-go v2.0.2+incompatible
-github.com/googleapis/gax-go
-# github.com/sfomuseum/go-lookup v0.0.1
-github.com/sfomuseum/go-lookup
+# github.com/googleapis/gax-go/v2 v2.0.5
+github.com/googleapis/gax-go/v2
+# github.com/sfomuseum/go-lookup v0.0.2
+## explicit
+github.com/sfomuseum/go-lookup/catalog
+github.com/sfomuseum/go-lookup/iterator
 # go.opencensus.io v0.22.5
 go.opencensus.io
 go.opencensus.io/internal
@@ -28,7 +30,8 @@ go.opencensus.io/trace
 go.opencensus.io/trace/internal
 go.opencensus.io/trace/propagation
 go.opencensus.io/trace/tracestate
-# gocloud.dev v0.21.0
+# gocloud.dev v0.22.0
+## explicit
 gocloud.dev/blob
 gocloud.dev/blob/driver
 gocloud.dev/gcerrors
