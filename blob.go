@@ -13,21 +13,21 @@ import (
 )
 
 type BlobIterator struct {
-	lookup.Iterator
+	iterator.Iterator
 	bucket *gc_blob.Bucket
 }
 
 func init() {
 
 	ctx := context.Background()
-	err := lookup.RegisterIterator(ctx, "blob", NewBlobIterator)
+	err := iterator.RegisterIterator(ctx, "blob", NewBlobIterator)
 
 	if err != nil {
 		panic(err)
 	}
 }
 
-func NewBlobIteratorWithBucket(ctx context.Context, bucket *gc_blob.Bucket) lookup.Iterator {
+func NewBlobIteratorWithBucket(ctx context.Context, bucket *gc_blob.Bucket) iterator.Iterator {
 
 	l := &BlobIterator{
 		bucket: bucket,
@@ -36,7 +36,7 @@ func NewBlobIteratorWithBucket(ctx context.Context, bucket *gc_blob.Bucket) look
 	return l
 }
 
-func NewBlobIterator(ctx context.Context, uri string) (lookup.Iterator, error) {
+func NewBlobIterator(ctx context.Context, uri string) (iterator.Iterator, error) {
 
 	bucket, err := gc_blob.OpenBucket(ctx, uri)
 
